@@ -1,0 +1,22 @@
+{
+  "name": "testing-practice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "sum.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ceejpineda/Testing-Practice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ceejpineda/Testing-Practice/issues"
+  },
+  "homepage": "https://github.com/ceejpineda/Testing-Practice#readme",
+  "devDependencies": {
+    "jest": "^29.3.1"
+  }
+}
