@@ -21,3 +21,9 @@ test('Test for symbols', ()=>{
 test('Test for negative shift', ()=>{
     expect(caesarCipher('a!bc',-1)).toBe('z!ab');
 });
+test('Test for positive negative shift', ()=>{
+    expect(caesarCipher('a!bc',99)).toBe('v!wx');
+});
+test('Test for extreme negative shift', ()=>{
+    expect(caesarCipher('a!bc',-99)).toBe('f!gh');
+});
