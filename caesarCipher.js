@@ -3,19 +3,40 @@ function caesarCipher(string, shift){
     //A-Z (65-90)
 
     let caesar = '';
+    const alpha = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
     for(let i=0; i<string.length;i++){
+        let charCode = string.charCodeAt(i);
         let num = (string.charCodeAt(i)+shift);
-        if(num>90 && num<97){
-            num -= 26;
-        }else if(num>122){
-            num-=26;
+
+        if(!alpha.includes(string[i])){
+            caesar += string[i];
+            continue;
         }
 
-        caesar += String.fromCharCode(num);
+        if(charCode>96 && charCode<123){
+            while(num<97){
+                num+=26;
+            }
+            while(num>122){
+                num-=26;
+            }
+            caesar += String.fromCharCode(num);
+        }
+        if(charCode>64 && charCode<91){
+            while(num<65){
+                num+=26;
+            }
+            while(num>90){
+                num-=26;
+            }
+            caesar += String.fromCharCode(num);
+        }
+        
     }
     return caesar
     
 }
 
+console.log(caesarCipher('abc',3));
 
 module.exports = caesarCipher;

@@ -15,3 +15,9 @@ test('Test for Z+ Capital Letters', ()=>{
 test('Test for z+ Capital Letters', ()=>{
     expect(caesarCipher('xyz',3)).toBe('abc');
 });
+test('Test for symbols', ()=>{
+    expect(caesarCipher('a!bc',1)).toBe('b!cd');
+});
+test('Test for negative shift', ()=>{
+    expect(caesarCipher('a!bc',-1)).toBe('z!ab');
+});
